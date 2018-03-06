@@ -54,8 +54,7 @@ RUN ln -sf /usr/bin/xvfb-firefox /usr/bin/firefox
 
 ENV FIREFOX_BIN /usr/bin/firefox
 
-# RUN node -v
-# RUN npm -v
-# RUN yarn -v
-# RUN apt-cache policy firefox-esr | grep Installed | sed -e "s/Installed/Firefox/"
-# RUN apt-cache policy chromium | grep Installed | sed -e "s/Installed/Chrome/"
+RUN node -v
+RUN npm -v
+RUN apt-cache policy firefox-esr | grep Installed | sed -e "s/Installed/Firefox/"
+RUN apt-cache policy chromium | grep Installed | sed -e "s/Installed/Chrome/"
